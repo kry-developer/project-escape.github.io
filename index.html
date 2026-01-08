@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT: STANDOFF - Pre-Alpha Prototype</title>
+    <meta name="description" content="Development stage tactical FPS prototype.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <div class="grid-overlay"></div>
+
+    <header>
+        <nav>
+            <div class="logo">PROJECT: STANDOFF <span style="font-size: 0.5em; color: #ff3333;">[PRE-ALPHA]</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">ホーム</a></li>
+                <li><a href="#about">開発情報</a></li>
+                <li><a href="#features">現在の機能</a></li>
+                <li><a href="#specs">動作環境</a></li>
+                <li><a href="#download" class="nav-cta">テスト版DL</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch" data-text="生存。適応。脱出。">生存。適応。脱出。</h1>
+                </div>
+                <p class="subtitle">開発初期プレアルファ版 / AI技術活用プロジェクト</p>
+                <div class="cta-group">
+                    <a href="https://drive.google.com/file/d/11nH2_SyNkfHY-C3wa1w-DnR9YW5no_bD/view?usp=sharing" class="btn primary-btn">
+                        <span class="btn-content">最新テスト版をDL</span>
+                        <div class="btn-scanline"></div>
+                    </a>
+                    <a href="#about" class="btn secondary-btn">
+                        <span class="btn-content">プロジェクト詳細</span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>スクロールして進む</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">DEV BRIEFING</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p><strong>【開発初期段階 / Pre-Alpha Build】</strong><br>
+                        本プロジェクトは現在開発の初期段階にあります。Alpha版以前のプロトタイプであり、マップ等の品質は発展途上です。</p>
+                        <p><strong>【AI技術の活用】</strong><br>
+                        本作は3Dモデルを除くほぼ全ての要素（コード、Webサイト、テキスト、画像生成など）にAIを使用する実験的な試みです。現在はクオリティの低いテストマップが1つだけ実装されていますが、武器の挙動にはこだわっています。</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">AI</span>
+                            <span class="stat-label">GENERATED</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">TEST MAP</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Dev</span>
+                            <span class="stat-label">STATUS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">現在の実装機能</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
+                        <h3>こだわりのリロード</h3>
+                        <p>3Dモデルとアニメーションは手動調整。武器ごとに固有のリロードアニメーションを作成・実装済み。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-robot"></i></div>
+                        <h3>AI × Human</h3>
+                        <p>3Dモデル以外のリソースはAIが生成。新しい開発スタイルの実験作。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3>テストマップ</h3>
+                        <p>現在は開発用テストマップ（低画質）が1つのみ実装されています。機能テスト用の環境です。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-cogs"></i></div>
+                        <h3>基本システム</h3>
+                        <p>基本的な射撃、移動、インタラクションを実装。本格的なゲームループは開発中です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="specs-section">
+            <div class="container">
+                <h2 class="section-title">動作環境 (暫定)</h2>
+                <div class="specs-table-container">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>コンポーネント</th>
+                                <th>必須環境</th>
+                                <th>推奨環境</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OS</td>
+                                <td>Windows 10 64-bit</td>
+                                <td>Windows 10/11 64-bit</td>
+                            </tr>
+                            <tr>
+                                <td>CPU</td>
+                                <td>Any</td>
+                                <td>Intel Core i7-4790</td>
+                            </tr>
+                            <tr>
+                                <td>メモリ</td>
+                                <td>4 GB RAM</td>
+                                <td>8 GB RAM</td>
+                            </tr>
+                            <tr>
+                                <td>グラフィック</td>
+                                <td>NVIDIA GeForce GTX 760</td>
+                                <td>NVIDIA GeForce GTX 1050 Ti</td>
+                            </tr>
+                            <tr>
+                                <td>ストレージ</td>
+                                <td>2 GB 空き容量</td>
+                                <td>2 GB (SSD 推奨)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="download">
+        <div class="footer-content">
+            <div class="download-container">
+                <h2>テストに参加する</h2>
+                <p>現在、開発中のビルドを公開しています。<br>不具合が含まれる可能性があります。</p>
+                <a href="https://drive.google.com/file/d/11nH2_SyNkfHY-C3wa1w-DnR9YW5no_bD/view?usp=sharing" class="btn primary-btn large-btn">
+                    <i class="fas fa-download"></i> Development7.0 (Latest)
+                </a>
+                <p class="sc-note">Pre-Alpha Build // Use at your own risk</p>
+            </div>
+
+            <div class="archives-container">
+                <h3>過去のビルド履歴</h3>
+                <div class="archive-list">
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="version-tag">Development6.2</span>
+                            <span class="release-date">2025-01-06</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/12jWg684HFk3tbS2PBE_trCV_1rE0GTQt/view?usp=sharing"
+                            class="btn secondary-btn small-btn">
+                            <i class="fas fa-download"></i> DL
+                        </a>
+                    </div>
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="version-tag">Development6.1</span>
+                            <span class="release-date">2025-01-05</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1ywQUxsTpu72TyEIQt_CVI2MzmrGTeVCZ/view?usp=sharing"
+                            class="btn secondary-btn small-btn">
+                            <i class="fas fa-download"></i> DL
+                        </a>
+                    </div>
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="version-tag">Development6.0</span>
+                            <span class="release-date">2025-01-04</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1IOR-AB4X7-XSGXz7-kPMb4M5VRKDxmfZ/view?usp=sharing"
+                            class="btn secondary-btn small-btn">
+                            <i class="fas fa-download"></i> DL
+                        </a>
+                    </div>
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="version-tag">Development5.2</span>
+                            <span class="release-date">2025-01-03</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1L0fXZgia34bwC0Sj3VIq4c3Mba5Giwjg/view?usp=sharing"
+                            class="btn secondary-btn small-btn">
+                            <i class="fas fa-download"></i> DL
+                        </a>
+                    </div>
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="version-tag">Development5.1</span>
+                            <span class="release-date">2025-01-02</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1uphegaV2ccqv7Z2FpGAqAlS_ZvbQogSB/view?usp=sharing"
+                            class="btn secondary-btn small-btn">
+                            <i class="fas fa-download"></i> DL
+                        </a>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="socials">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 PROJECT: STANDOFF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
